@@ -48,7 +48,7 @@ The script automatically downloads the dataset from UCI, runs the full pipeline,
 
 ### 3. View Results
 
-Charts and CSV results are saved to the `./charts/` directory:
+Charts and CSV results are saved to the `charts.tar.gz` directory:
 - `01_target_distribution.png` — Class imbalance visualization
 - `02_age_distribution.png` — Age vs subscription
 - `03_job_subscription_rate.png` — Job category analysis
