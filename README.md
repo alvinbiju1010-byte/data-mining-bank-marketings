@@ -106,10 +106,8 @@ Charts and CSV results are saved to the `./charts/` directory:
 ```
 data-mining-bank-marketing/
 ├── data_mining_pipeline.py    # Complete pipeline (all 5 stages)
-├── report.md                   # Project report (~2,800 words)
 ├── README.md                   # This file
 ├── charts/                     # Generated charts & CSVs
-├── data/                       # Dataset (downloaded automatically or placed manually)
 └── .gitignore
 ```
 
