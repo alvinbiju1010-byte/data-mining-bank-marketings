@@ -1,5 +1,5 @@
 """
-Data Mining — Individual Project
+Data Mining —  Project
 Student: Alvin Biju (ID: GH1029339)
 Dataset: Bank Marketing Dataset (UCI Machine Learning Repository)
 
@@ -38,7 +38,7 @@ from sklearn.neighbors import KNeighborsClassifier
 import warnings
 warnings.filterwarnings("ignore")
 
-# ── Style Configuration ──────────────────────────────────────────────────────
+# ── Style Configuration 
 plt.style.use("seaborn-v0_8-whitegrid")
 sns.set_palette("Set2")
 plt.rcParams.update({
@@ -54,9 +54,9 @@ print("=" * 65)
 print("Bank Marketing Data Mining Pipeline — Alvin Biju (GH1029339)")
 print("=" * 65)
 
-# ═══════════════════════════════════════════════════════════════════════════
+
 # STAGE 1: DATA LOADING & INITIAL UNDERSTANDING
-# ═══════════════════════════════════════════════════════════════════════════
+
 print("\n[1/5] Loading Bank Marketing Dataset...")
 
 # Dataset: Bank Marketing from UCI ML Repository
@@ -80,12 +80,12 @@ print(f"\nTarget variable 'y' distribution:")
 print(df["y"].value_counts())
 print(f"  Subscription rate: {df['y'].value_counts(normalize=True)['yes']*100:.1f}%")
 
-# ── Save dataset info ──
+
 df.describe().to_csv(f"{OUTPUT_DIR}descriptive_stats.csv")
 
-# ═══════════════════════════════════════════════════════════════════════════
+
 # STAGE 2: EXPLORATORY DATA ANALYSIS (EDA)
-# ═══════════════════════════════════════════════════════════════════════════
+
 print("\n[2/5] Exploratory Data Analysis...")
 
 # --- Chart 1: Target Variable Distribution ---
@@ -193,9 +193,9 @@ fig.savefig(f"{OUTPUT_DIR}07_seasonal_trend.png")
 plt.close()
 print("✓ Chart 7: Seasonal trend")
 
-# ═══════════════════════════════════════════════════════════════════════════
+
 # STAGE 3: DATA PREPROCESSING & FEATURE ENGINEERING
-# ═══════════════════════════════════════════════════════════════════════════
+
 print("\n[3/5] Data Preprocessing & Feature Engineering...")
 
 # Create a copy for preprocessing
@@ -272,9 +272,9 @@ cat_feature_names = preprocessor.named_transformers_["cat"].named_steps["onehot"
 all_feature_names = list(numeric_cols) + list(cat_feature_names)
 print(f"\nTotal features after preprocessing: {len(all_feature_names)}")
 
-# ═══════════════════════════════════════════════════════════════════════════
+
 # STAGE 4: MODEL TRAINING — Multiple Algorithms
-# ═══════════════════════════════════════════════════════════════════════════
+
 print("\n[4/5] Training Multiple Models...")
 
 models = {
@@ -331,9 +331,9 @@ for name, model in models.items():
     if roc_auc:
         print(f"    ROC-AUC:   {roc_auc:.4f}")
 
-# ═══════════════════════════════════════════════════════════════════════════
+
 # STAGE 5: MODEL EVALUATION & COMPARISON
-# ═══════════════════════════════════════════════════════════════════════════
+
 print("\n[5/5] Evaluating & Comparing Models...")
 
 # --- Chart 8: Metrics Comparison Bar Chart ---
@@ -445,7 +445,7 @@ fig.savefig(f"{OUTPUT_DIR}12_cross_validation.png")
 plt.close()
 print("✓ Chart 12: Cross-validation comparison")
 
-# ── FINAL SUMMARY ───────────────────────────────────────────────────────────
+# ── FINAL SUMMARY 
 print("\n" + "=" * 65)
 print("FINAL RESULTS SUMMARY")
 print("=" * 65)
